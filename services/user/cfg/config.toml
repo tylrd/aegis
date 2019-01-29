@@ -1,0 +1,26 @@
+LogLevel = "INFO"
+
+[Server]
+Bind = "localhost"
+Port = 8000
+CORS = true
+Origin = "http://localhost:8080"
+
+[Session]
+Name = "session"
+SecretKey = "@dlIIVevTNf^I3RjlnBQ416CD@UQuk#D"
+
+  [Session.Options]
+  MaxAge = 604800 # one week
+  HttpOnly = true
+
+  [Session.Store]
+  Address = "localhost:6379"
+
+[Database]
+Username = "postgres"
+Password = "password"
+Name = "aegis"
+Hostname = "localhost"
+Port = 5432
+Parameter = "sslmode=disable"
